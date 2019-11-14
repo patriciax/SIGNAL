@@ -137,7 +137,6 @@ return [
 		'Illuminate\View\ViewServiceProvider',
         'Vsmoraes\Pdf\PdfServiceProvider',
 		'Styde\BladePagination\ServiceProvider',
-		'Barryvdh\Cors\ServiceProvider',
 
 		/*
 		 * Application Service Providers...

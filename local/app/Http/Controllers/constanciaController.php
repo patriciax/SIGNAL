@@ -143,8 +143,9 @@ class constanciaController extends Controller {
 		}
 
 		else{
+            
 			$html = view('pdf.constanciaActuales')->with('datos', $datos)->with('primaAntiguedad', $primaAntiguedad)->with('dia', $dia)->with('mes', $mes)->with('año', $año)->with('primaTransporte', $primaTransporte)->with('primaProfesionalizacion', $primaProfesionalizacion)->with('primaAntiguedad_letras', $primaAntiguedad_letras)->with('primaTransporte_letras', $primaTransporte_letras)->with('primaProfesionalizacion_letras', $primaProfesionalizacion_letras)->with('sueldo_letras', $sueldo_letras)->with('dia_letras', $dia_letras)->render();
-        return PDF::load($html)->show();
+            return PDF::load($html)->show();
 		}
 
 	}

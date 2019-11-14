@@ -29,7 +29,7 @@ style="
                    		<div class="col s12">
 			        <div class="card-panel z-depth-5 v-align animated slideInUp">
 
-			        	<h4 class="center-align">Consulta tu recibo de pago {{ csrf_token() }} </h4>
+			        	<h4 class="center-align">Consulta tu recibo de pago</h4>
 			          <form method="post" action="{{url('/verificar_nomina')}}">
 			          <input type="hidden" name="_token" value="{{ csrf_token() }}">
 			          	<div class="row">

@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Constancia</title>
-</head>
-<body>
+
 
 	<img src="{!! public_path().'/img/cintillo.jpg'!!}" style="width: 100%;">
   <!--<img src="{!! public_path().'/img/zonfipca.png'!!}" style="width: 120px; height: 100px; position: absolute; left: -10px; top: 55px; left: 5px;">-->
@@ -32,5 +27,3 @@
 
 	<img src="{!! public_path().'/img/zamora.png'!!}" style="width: 100%; position: absolute; bottom: 40px;">
 
-</body>
-</html>
