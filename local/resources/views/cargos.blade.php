@@ -8,8 +8,9 @@
           <li class="collection-item teal darken-3"><h5 class="center-align" style="color: white;">{{session('alert')}}</h5></li>
         </ul>
       @endif
-
-      <p class="center-align"><a class="btn waves-effect modal-trigger" data-target="modal_cargos">Nuevo cargo <i class="material-icons right">add</i></a></p>
+      <div class="float-btn">
+        <p class="center-align"><a class="btn btn-small waves-effect modal-trigger" data-target="modal_cargos"><i class="material-icons">add</i></a></p>
+      </div>
 
     <div class="row">
         
@@ -25,15 +26,15 @@
                         </form>
                     </div>
                     <div class="card-action">
-                      <div class="row">
-                        <a onclick="verificar_editar({{$cargo->id}})" class="btn"><i class="material-icons">edit</i></a>
+                      <div class="row center-flex">
+                        <a onclick="verificar_editar({{$cargo->id}})" class="btn btn-small gray"><i class="material-icons">edit</i></a>
                         @if($cargo->status == 1)
-                          <a onclick="eliminar({{$cargo->id}})" class="btn red"><i class="material-icons">delete</i></a>
+                          <a onclick="eliminar({{$cargo->id}})" class="btn btn-small gray"><i class="material-icons">delete</i></a>
                           <form method="post" action="{{url('/borrar_cargos/'.$cargo->id)}}" id="eliminar{{$cargo->id}}">
                               <input type="hidden" name="_token" value="{{ csrf_token() }}">
                           </form>
                         @else
-                          <a onclick="activar({{$cargo->id}})" class="btn"><i class="material-icons">event_available</i></a>
+                          <a onclick="activar({{$cargo->id}})" class="btn btn-small gray"><i class="material-icons">event_available</i></a>
                           <form method="post" action="{{url('/activar_cargos/'.$cargo->id)}}" id="activar{{$cargo->id}}">
                               <input type="hidden" name="_token" value="{{ csrf_token() }}">
                           </form>
@@ -49,8 +50,12 @@
     </div>
 
     <div class="modal modal-fixed-footer" id="modal_cargos" style="height: 310px;">
+      <div class="close-modal">
+        <a href="#!" class="right-align modal-action modal-close waves-effect waves-green btn-flat "><i class="material-icons right">close</i></a>
+
+    </div>
     	<div class="modal-content">
-            <h4 class="center-align">Registrar cargo</h4>
+            <h4>Registrar cargo</h4>
             <form action="{{url('/crear_cargo')}}" method="post" id="form">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="row">
@@ -60,14 +65,11 @@
                     </div>
                 </div>
                   
-                <p class="center-align"><a class="btn" onclick="verificar()">Registrar<i class="material-icons right">send</i></a></p>
+                <p class="right-align"><a class="btn btn-medium" onclick="verificar()">Registrar<i class="material-icons right">send</i></a></p>
                 
             </form>
         
         </div>
-        <div class="modal-footer">
-      		<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
-    	</div>
     </div>
 
     <script>

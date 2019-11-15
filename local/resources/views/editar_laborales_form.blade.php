@@ -4,7 +4,7 @@
 
 @foreach($laborales as $labor)
 
-<div class="container">
+<div class="container container--card">
 
 	<h4>Datos laborales</h4>
 

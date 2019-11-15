@@ -18,7 +18,7 @@
         </ul>
       @endif
 
-<div class="container">
+<div class="container container--card">
     
     <h4>Ingresar Empleado</h4>
 
@@ -152,7 +152,7 @@
     <label>Tipo de carrera</label>
     </div>
 
-        <p class="center-align"><a type="button" onclick="verificar()" class="waves-effect waves-light btn"><i class="material-icons right">send</i>siguiente</a></p>
+        <p class="right-align"><a type="button" onclick="verificar()" class="waves-effect waves-light btn btn-medium"><i class="material-icons right">send</i>siguiente</a></p>
       </form>
 
   </div>

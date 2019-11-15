@@ -1,12 +1,21 @@
 @extends('partials.layout')
 
 @section('content')
+		<div class="container container--card">
+			<div class="center-flex">
+				<p class="center" style="margin-right: 5px;"><a class="waves-effect waves-light btn btn-medium modal-trigger" href="#modal_retirados"><i class="material-icons right">send</i>Retirados</a></p>
+				<p class="center"><a class="waves-effect waves-light btn btn-medium modal-trigger" href="#modal_actuales"><i class="material-icons right">send</i>Actuales</a></p>
 
-		<p class="center" style="margin-top: 50px;"><a class="waves-effect waves-light btn modal-trigger" href="#modal_retirados"><i class="material-icons right">send</i>Retirados</a></p>
-		<p class="center"><a class="waves-effect waves-light btn modal-trigger" href="#modal_actuales"><i class="material-icons right">send</i>Actuales</a></p>
+			</div>	
+		</div>
 
 
 		<div id="modal_retirados" class="modal modal-fixed-footer">
+			 <div class="close-modal">
+        <a href="#!" class="right-align modal-action modal-close waves-effect waves-green btn-flat "><i class="material-icons right">close</i></a>
+
+    </div>
+    
 			<div class="modal-content">
 				<h4>Retirados</h4>
 				<form class="col s12" id="formulario1" action="{{url('/generarConstancia/1')}}" method="post">
@@ -16,18 +25,20 @@
 			          		<input id="cedula" type="text" class="validate" name="cedula">
 			          		<label for="cedula">Cedula</label>
 			        	</div>
-			        	<p class="center-align">
-			        		<a class="waves-effect waves-light btn" onclick="verificar()"><i class="material-icons right">send</i>generar constancia</a>
+			        	<p class="right-align" >
+			        		<a class="waves-effect waves-light btn btn-medium" style="margin-top:10px;" onclick="verificar()"><i class="material-icons right">send</i>generar constancia</a>
 			        	</p>
 			    	</div>
     			</form>
 			</div>
-			<div class="modal-footer">
-				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
-			</div>
+			
 		</div>
 
 		<div id="modal_actuales" class="modal modal-fixed-footer">
+			 <div class="close-modal">
+				<a href="#!" class="right-align modal-action modal-close waves-effect waves-green btn-flat "><i class="material-icons right">close</i></a>
+
+			</div>
 			<div class="modal-content">
 				<h4>Actuales</h4>
 				<form class="col s12" id="formulario2" action="{{url('/generarConstancia/2')}}" method="post">
@@ -37,15 +48,13 @@
 			          		<input id="cedula2" type="text" class="validate" name="cedula">
 			          		<label for="cedula2">Cedula</label>
 			        	</div>
-			        	<p class="center-align">
-			        		<a class="waves-effect waves-light btn" onclick="verificar_actuales()"><i class="material-icons right">send</i>generar constancia</a>
+			        	<p class="right-align">
+			        		<a class="waves-effect waves-light btn btn-medium" style="margin-top:10px;"  onclick="verificar_actuales()"><i class="material-icons right">send</i>generar constancia</a>
 			        	</p>
 			    	</div>
     			</form>
 			</div>
-			<div class="modal-footer">
-				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
-			</div>
+			
 		</div>
 
 

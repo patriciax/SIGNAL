@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container container--card">
 
-        <h3 class="center-align">Datos Opcionales</h3>
+        <h3 >Datos Opcionales</h3>
         <br>
         <br>
 
@@ -79,7 +79,7 @@
 
             </div>
             
-            <p class="center-align"><input class="btn" type="submit" target="_blank" value="generar"></p>
+            <p class="right-align"><input class="btn btn-medium" type="submit" target="_blank" value="generar"></p>
 
         </form>
 

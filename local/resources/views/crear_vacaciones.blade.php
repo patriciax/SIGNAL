@@ -8,22 +8,25 @@
         </ul>
       @endif
 
-	<div class="container">
+	<div class="container container--card">
 		
-	<h3 class="center-align">Vacaciones</h3>
+	<h3 >Vacaciones</h3>
 
 		<form action="{{url('/buscar')}}" method="post" id="form_buscar">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<div class="row">
-		        <div class="input-field col s12">
+		        <div class="input-field col s11">
 		          <input id="cedula" type="text" class="validate" name="cedula">
 		          <label for="cedula">Cedula</label>
-		        </div>
+						</div>
+						<div class="col s1">
+
+							<p class="right-align">
+								<a class="waves-effect waves-light btn btn-small" onclick="verificar()"><i class="material-icons right">search</i></a>
+							</p>
+						</div>
 	      	</div>
 
-	      	<p class="center-align">
-	      		<a class="waves-effect waves-light btn" onclick="verificar()"><i class="material-icons right">search</i>buscar</a>
-	      	</p>
 
 		</form>
 

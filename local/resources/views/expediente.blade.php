@@ -2,9 +2,9 @@
 
 @section('content')
 
-	<h3 class="center-align">Expedientes</h3>
 
-	<div class="container">
+	<div class="container container--card">
+			<h3 >Expedientes</h3>
 		
 		<div class="row">
 			<div class="col l3">
@@ -23,7 +23,7 @@
 		        </div>
 			</div>
 			<div class="col l1">
-				<button onclick="find()" style="margin-top: 15px;" class="waves-effect waves-light btn"><i class="material-icons">search</i></button>
+				<button onclick="find()" style="margin-top: 15px;" class="waves-effect waves-light btn btn-small"><i class="material-icons">search</i></button>
 			</div>
 		</div>
 

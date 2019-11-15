@@ -8,7 +8,7 @@
 		$departamentos = DB::table('departamentos')->get();
     ?>
 
-    @if (count($errors) > 0)
+    @if (count($errors) > 0)
      <ul class="collection">
             @foreach ($errors->all() as $error)
                 <li class="collection-item teal darken-3"><h5 class="center-align" style="color: white;">{{$error}}</h5></li>
@@ -23,7 +23,7 @@
         </ul>
       @endif
 
-<div class="container">
+<div class="container container--card">
     
     <h4>Ingresar Pasante</h4>
 
@@ -138,7 +138,7 @@
         </div>
       </div>
 
-      <h3 class="center-align"> Datos Laborales </h3>
+      <h3 > Datos Laborales </h3>
 
       <div class="input-field col s12">
         <select name="departamento" id="departamento">
@@ -156,7 +156,7 @@
           		<label for="fecha_nacimiento">Fecha de ingreso</label>
         	</div>
     	</div>
-        <p class="center-align"><a type="button" onclick="verificar()" class="waves-effect waves-light btn"><i class="material-icons right">send</i>siguiente</a></p>
+        <p class="right-align"><a type="button" onclick="verificar()" class="waves-effect waves-light btn btn-medium"><i class="material-icons right">send</i>siguiente</a></p>
         <br>
         <br>
         <br>

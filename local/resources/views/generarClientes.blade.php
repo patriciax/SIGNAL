@@ -5,9 +5,11 @@
 	<h3 class="center-align">Tarjetas de alimentacion</h3>
 	<h4 class="center-align">Generar clientes</h4>
 	
-	<center>
-		<a class="waves-effect waves-light btn" onclick="seleccionarTodos()">seleccionar todos</a>
-	</center>
+	<div class="close-modal">
+
+		<a class="waves-effect waves-light btn btn-medium" onclick="seleccionarTodos()">seleccionar todos</a>
+	</div>
+	
 
 	<div class="container">
 		<form action="{{url('/tarjetaAlimentacion/generarClientes')}}" method="post">

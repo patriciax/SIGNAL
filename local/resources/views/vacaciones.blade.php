@@ -8,7 +8,7 @@
         </ul>
       @endif
 
-    
+
 	<table class="bordered">
         <thead>
           <tr>
@@ -29,9 +29,9 @@
             <td>{{$vacacion->fecha_inicio}}</td>
             <td>{{$vacacion->fecha_fin}}</td>
             <td>{{$vacacion->fecha_registro}}</td>
-            <td>
-            	<a class="btn waves-effect" href="{{url('/reporte_vacaciones/'.$vacacion->id)}}" target="_blank"><i class="material-icons">search</i></a>
-            	<a class="btn waves-effect red" onclick="eliminar({{$vacacion->id}})"><i class="material-icons">delete</i></a>
+            <td class="center-flex">
+            	<a class="btn btn-small gray waves-effect" href="{{url('/reporte_vacaciones/'.$vacacion->id)}}" target="_blank"><i class="material-icons">search</i></a>
+            	<a class="btn btn-small gray waves-effect " onclick="eliminar({{$vacacion->id}})"><i class="material-icons">delete</i></a>
               <form method="post" action="{{url('/eliminar_vacacion/'.$vacacion->id)}}" id="eliminar{{$vacacion->id}}">
                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
               </form>

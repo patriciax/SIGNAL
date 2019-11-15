@@ -8,9 +8,10 @@
         </ul>
     @endif
 	
-	<h3 class="center-align">Retenciones</h3>
-
-	<div class="container">
+	
+	<div class="container container--card">
+		<h4>Retenciones</h4>
+			
 
 		<form method="post" action="{{url('/generarRetencionesPDF')}}" id="retenciones">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -69,7 +70,7 @@
 
 			</div>
 
-			<p class="center-align"><a class="waves-effect waves-light btn" onclick="verificar()"><i class="material-icons right">send</i>Generar</a></p>
+			<p class="right-align"><a class="waves-effect waves-light btn btn-medium" onclick="verificar()"><i class="material-icons right">send</i>Generar</a></p>
 
 		</form>
 		
@@ -77,7 +78,7 @@
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<div class="row">
 				
-				<h5 class="center-align">Generar TXT de TSS</h5>
+				<h4>Generar TXT de TSS</h4>
 
 				<div class="input-field col s6">
 				    <select name="mes" id="mes">
@@ -121,7 +122,7 @@
 
 			</div>
 
-			<p class="center-align"><button class="waves-effect waves-light btn"><i class="material-icons right">send</i>Generar</button></p>
+			<p class="right-align"><button class="waves-effect waves-light btn btn-medium"><i class="material-icons right">send</i>Generar</button></p>
 
 		</form>
 

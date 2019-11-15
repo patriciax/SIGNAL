@@ -8,7 +8,7 @@
         </ul>
       @endif
 
-	<div class="container">
+	<div class="container container--card">
 
 		<form id="cierre" action="{{url('/cerrar_nomina')}}" method="post">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -19,7 +19,7 @@
 		        </div>
 		    </div>
 
-		    <p class="center-align"><a class="waves-effect waves-light btn" onclick="cerrar()"><i class="material-icons right">close</i>Cerrar nomina</a></p>
+		    <p class="right-align"><a class="waves-effect waves-light btn btn-medium" onclick="cerrar()"><i class="material-icons right">close</i>Cerrar nomina</a></p>
 
 		</form>
 

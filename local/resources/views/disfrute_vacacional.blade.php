@@ -9,10 +9,12 @@
       @endif
 
      <h3 class="center-align">Disfrute Vacacional</h3>
+	<div class="float-btn">
 
-	<p class="center-align">
-		<a class="btn-floating btn-large waves-effect waves-light green modal-trigger" href="#modal-disfrute"><i class="material-icons">add</i></a>
-	</p>
+		<p class="center-align">
+			<a class="btn-floating btn btn-small waves-effect waves-light modal-trigger" href="#modal-disfrute"><i class="material-icons">add</i></a>
+		</p>
+	</div>
 
 	<div class="container">
 		<table class="bordered">
@@ -35,7 +37,7 @@
 						<td>
 							<div class="row">
 								<p class="center-align">
-									<a onclick="eliminar({{$disfrute->id}})" class="waves-effect waves-light btn red"><i class="material-icons">delete</i></a>
+									<a onclick="eliminar({{$disfrute->id}})" class="waves-effect waves-light btn btn-small gray"><i class="material-icons">delete</i></a>
 									<form id="form_eliminar{{$disfrute->id}}" style="display: none;" action="{{url('/disfrute_vacacional/eliminar/').'/'.$disfrute->id}}" method="post">
 				      					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				      				</form>

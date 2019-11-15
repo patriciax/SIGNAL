@@ -8,12 +8,14 @@
         </ul>
     @endif
 
+	<div class="float-btn">
+		<p class="center-align">
+			<a class="btn-floating btn btn-small waves-effect waves-light modal-trigger" href="#modal_descuento"><i class="material-icons">add</i></a>
+		</p>
 
-	<p class="center-align">
-		<a class="btn-floating btn-large waves-effect waves-light green modal-trigger" href="#modal_descuento"><i class="material-icons">add</i></a>
-	</p>
-
-	<table class="bordered">
+	</div>
+	<div class="container container--card">
+<table class="bordered">
 		<thead>
 			<tr>
 				<th>Cedula</th>
@@ -42,9 +44,9 @@
 					<td>
 						{{$descuento->cuota}}
 					</td>
-					<td>
+					<td class="center-flex">
 						<p>
-							<a class="waves-effect waves-light btn red"><i class="material-icons right" onclick="eliminar({{$descuento->id}})">delete</i></a>
+							<a class="waves-effect waves-light btn btn-small gray"><i class="material-icons right" onclick="eliminar({{$descuento->id}})">delete</i></a>
 							<form style="display: none;" method="post" action="{{url('/borrar_descuento/'.$descuento->id)}}" id="eliminar{{$descuento->id}}">
 								<input type="hidden" name="_token" value="{{ csrf_token() }}">
 							</form>
@@ -54,9 +56,16 @@
 			@endforeach
 		</tbody>
 	</table>
+	</div>
+	
 
 	<!-- Modal -->
 		<div id="modal_descuento" class="modal">
+			 <div class="close-modal">
+				<a href="#!" class="right-align modal-action modal-close waves-effect waves-green btn-flat "><i class="material-icons right">close</i></a>
+
+			</div>
+			
     		<div class="modal-content">
       			<h4>Datos</h4>
       			<form method="POST" action="{{url('/crear_descuento')}}" id="form_descuento">
@@ -79,14 +88,12 @@
 				          <label for="cuota">Cuota</label>
 				        </div>
 				    </div>
-				    <p class="center-align">
-				    	<a class="waves-effect waves-light btn" onclick="verificar()"><i class="material-icons right">send</i>crear</a>
+				    <p class="right-align">
+				    	<a class="waves-effect waves-light btn btn-medium" onclick="verificar()">Crear<i class="material-icons "></i></a>
 				    </p>
       			</form>
     		</div>
-    		<div class="modal-footer">
-      			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
-    		</div>
+    	
   		</div>
 
 	<!---->

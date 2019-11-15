@@ -3,7 +3,7 @@
 
 @section('content')
 @foreach($empleados as $empleado)
-    <div class="container">
+    <div class="container container--card">
         <h4>Editar Empleado</h4>
 
     <form class="col s12" method="post" action="{{url('/editar_empleado/'.$empleado->id)}}" id="form_ingresar">
@@ -135,7 +135,7 @@
     </select>
     <label>Tipo de carrera</label>
     </div>
-        <p class="center-align"><a type="button" onclick="verificar()" class="waves-effect waves-light btn"><i class="material-icons right">send</i>siguiente</a></p>
+        <p class="right-align"><a type="button" onclick="verificar()" class="waves-effect waves-light btn btn-medium"><i class="material-icons right">send</i>siguiente</a></p>
       </form>
     </div>
     

@@ -25,7 +25,7 @@
 								desactivar
 							</a>
 						@else
-							<a href="{{url('/prima_vacaciones/activar/').'/'.$persona->id}}" class="btn">
+							<a href="{{url('/prima_vacaciones/activar/').'/'.$persona->id}}" class="btn btn-medium">
 								activar
 							</a>
 						@endif

@@ -2,7 +2,6 @@
 
 @section('content')
     
-  <h4 style="text-align: center;">Total devengado</h4>
 
   @if(session('alert'))
         <ul class="collection">
@@ -10,13 +9,15 @@
         </ul>
     @endif
 
-  <div class="container">
+  <div class="container container--card">
+
+  <h4>Total devengado</h4>
 
     <form method="post" action="{{url('/generarDevengadoPDF')}}" id="devengado">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="row">
         
-        <div class="input-field col s3 offset-s3">
+        <div class="input-field col s6 ">
             <select name="mes" id="mes">
               <option value="" selected>Eligir Mes</option>
               <option value="01">Enero</option>
@@ -35,7 +36,7 @@
             <label>Elegir Mes</label>
         </div>
 
-        <div class="input-field col s3">
+        <div class="input-field col s6">
             <select name="annio" id="annio">
               <option value="" selected>Eligir Año</option>
               <option value="2017">2017</option>
@@ -58,7 +59,7 @@
 
       </div>
 
-      <p class="center-align"><a class="waves-effect waves-light btn" onclick="verificar()"><i class="material-icons right">send</i>Generar</a></p>
+      <p class="right-align"><a class="waves-effect waves-light btn btn-medium" onclick="verificar()"><i class="material-icons right">send</i>Generar</a></p>
 
     </form>
 

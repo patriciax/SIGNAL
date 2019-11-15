@@ -8,9 +8,11 @@
         </ul>
       @endif
 
-	<div class="container">
+	<div class="container container--card">
+        <div class="close-modal">
 
-         <p class="center-align"><a class="btn-floating btn-large waves-effect waves-light modal-trigger" data-target="modal_familiar"><i class="material-icons">add</i></a></p>
+            <p class="right-align"><a class="btn-floating btn btn-small waves-effect waves-light modal-trigger" data-target="modal_familiar"><i class="material-icons">add</i></a></p>
+        </div>
      
 		 <table class="bordered center-align">
         <thead>
@@ -93,9 +95,13 @@
 	</div>
 
 <div class="modal modal-fixed-footer" id="modal_familiar">
+    <div class="close-modal">
+        <a href="#!" class="right-align modal-action modal-close waves-effect waves-green btn-flat "><i class="material-icons right">close</i></a>
+
+    </div>
     
     <div class="modal-content">
-        <h4 class="center-align">Familiar</h4>
+        <h4>Familiar</h4>
         	<div class="row">
     <form class="col s12" action="{{url('/registrar_familiar/'.$id_personal)}}" id="form" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -126,15 +132,12 @@
           <label for="carga">Carga familiar</label>
         </div>
 </div>
-    <p><a class="btn waves-effect" onclick="verificar()">Registrar<i class="material-icons right">send</i></a></p>
+
+    <p class="right-align"><a class="btn btn-medium waves-effect" onclick="verificar()">Registrar<i class="material-icons right">send</i></a></p>
 
     </form>
   </div>
         
-    </div>
-    
-    <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
     </div>
     
 </div>

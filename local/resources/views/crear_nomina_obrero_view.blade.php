@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container container--card">
         
         <h4>Crear nomina operarios</h4>
         
@@ -49,7 +49,7 @@
                 <label>Cantidad de semanas</label>
               </div>
               
-              <p class="center-align"><a type="button" onclick="verificar()" class="waves-effect waves-light btn"><i class="material-icons right">send</i>crear</a></p>
+              <p class="right-align"><a type="button" onclick="verificar()" class="waves-effect waves-light btn btn-medium"><i class="material-icons right"></i>crear</a></p>
               
 
         </form>

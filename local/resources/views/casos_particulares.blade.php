@@ -8,7 +8,8 @@
         </ul>
     @endif
 	
-	<div class="row">
+	<div class="container container--card">
+		<div class="row">
    
       	<form action="{{url('/casos_particulares')}}" method="post" id="form">
       		<input type="hidden" name="_token" value="{{ csrf_token() }}">		
@@ -32,11 +33,13 @@
 		    	<label>Concepto</label>
 		  	</div>
 
-		  	<p class="center-align"><a onclick="verificar()" class="btn waves-effect" data-target="modal_caso_particular">Nuevo caso particular<i class="material-icons right">add</i></a></p>
+		  	<p class="right-align"><a onclick="verificar()" class="btn btn-medium waves-effect" data-target="modal_caso_particular">Agregar<i class="material-icons right">add</i></a></p>
 
 		</form>
 
 	</div>
+	</div>
+	
 
 	<ul class="collection with-header">
 		@foreach($casos_particulares as $caso_particular)

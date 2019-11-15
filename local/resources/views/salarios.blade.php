@@ -7,8 +7,9 @@
           <li class="collection-item teal darken-3"><h5 class="center-align" style="color: white;">{{session('alert')}}</h5></li>
         </ul>
       @endif
-
-	 <p class="center-align"><a class="btn-floating btn-large waves-effect waves-light modal-trigger" data-target="modal_sueldos"><i class="material-icons">add</i></a></p>
+  <div class="float-btn">
+    <p class="center-align"><a class="btn-floating btn btn-small waves-effect waves-light modal-trigger" data-target="modal_sueldos"><i class="material-icons">add</i></a></p>
+  </div>
 
 	 	@if(count($sueldos) <= 0)
 		<ul class="collection">
@@ -17,9 +18,9 @@
 	@endif
 
 
-	@if(count($sueldos) > 0)
-
-		<table class="bordered">
+  @if(count($sueldos) > 0)
+  <div class="container container--card">
+<table class="bordered">
         <thead>
           <tr>
               <th>Descripción</th>
@@ -37,12 +38,15 @@
             	<td><input type="text" value="{{$sueldo->sueldo}}" name="sueldo"></td>
             </form>
             	<td class="center-align">
-            		<a onclick="editar({{$sueldo->id}})" class="btn waves-effect"><i class="material-icons">edit</i></a>
+            		<a onclick="editar({{$sueldo->id}})" class="btn btn-small gray waves-effect"><i class="material-icons">edit</i></a>
             	</td>
           </tr>
         @endforeach
         </tbody>
       </table>
+  </div>
+
+		
 
 
 	@endif
@@ -50,9 +54,12 @@
 	<!--Modal-->
 
 		<div class="modal modal-fixed-footer" id="modal_sueldos">
-    
+    <div class="close-modal">
+        <a href="#!" class="right-align modal-action modal-close waves-effect waves-green btn-flat "><i class="material-icons right">close</i></a>
+
+    </div>
 		    <div class="modal-content">
-		        <h4 class="center-align">Salarios</h4>
+		        <h4 >Salarios</h4>
 		        	<div class="row">
 		    <form class="col s12" action="{{url('/insertar_salario')}}" id="form" method="post">
 		        <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -72,16 +79,14 @@
 		        </div>
 		      </div>
 		      
-		    <p><a class="btn waves-effect" onclick="verificar()">Registrar<i class="material-icons right">send</i></a></p>
+		    <p class="right-align"><a class="btn btn-medium waves-effect" onclick="verificar()">Registrar<i class="material-icons right">send</i></a></p>
 
 		    </form>
 		  </div>
 		        
 		    </div>
 		    
-		    <div class="modal-footer">
-		        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
-		    </div>
+		
 		    
 		</div>
 

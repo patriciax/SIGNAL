@@ -2,8 +2,8 @@
 
 @section('content')
     
-    <div class="container">
-        <h3 class="center-align">Liquidaciones</h3>
+    <div class="container container--card">
+        <h3>Liquidaciones</h3>
 
         <form method="post" action="{{url('/liquidar')}}">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -27,7 +27,7 @@
                 <label for="deposito">Depositado en el Banco Mercantil</label>
             </div>
 
-            <p class="center-align"><button class="btn waves-effect waves-light" type="submit" name="action">Crear liquidación
+            <p class="right-align"><button class="btn btn-medium waves-effect waves-light" type="submit" name="action">Crear liquidación
                     <i class="material-icons right">send</i>
                 </button></p>
 

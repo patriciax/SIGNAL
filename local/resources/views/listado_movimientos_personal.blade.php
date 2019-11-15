@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container container--card">
 
-        <h3 class="center-align">Movimientos</h3>
-        <h5 class="center-align">Filtrar por fecha</h5>
+        <h3 class="">Movimientos</h3>
+        <h5 class="">Filtrar por fecha</h5>
         <div class="row">
             <div class="col s4">
                 <div class="input-field col s12">

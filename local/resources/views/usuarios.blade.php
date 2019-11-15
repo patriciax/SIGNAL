@@ -8,14 +8,15 @@
           <li class="collection-item teal darken-3"><h5 class="center-align" style="color: white;">{{session('alert')}}</h5></li>
         </ul>
       @endif
-
+      <div class="float-btn">
+        <p class=""><a class="btn btn-small waves-effect modal-trigger" data-target="modal_usuario"> <i class="material-icons ">add</i></a></p>
+      </div>
     <div class="container">
         
-        <p class="center-align"><a class="btn waves-effect modal-trigger" data-target="modal_usuario">Nuevo usuario <i class="material-icons right">send</i></a></p>
         
         @foreach($usuarios as $usuario)
         
-            <div class="col s12 m7">
+            <div class="col s12 m4">
                 <div class="card horizontal">
                   <div class="card-image">
                     <img src="{{url('img/user.ico')}}" style="height: 150px; with: 150px;">
@@ -27,7 +28,7 @@
                     </div>
                     <div class="card-action">
                       <div class="row">
-                          <a class="btn" style="background-color: #e53935;" onclick="eliminar({{$usuario->user_id}})"><i class="material-icons">delete</i></a>
+                          <a class="btn btn-small gray" onclick="eliminar({{$usuario->user_id}})"><i class="material-icons">delete</i></a>
                           <form id="usuario{{$usuario->user_id}}" action="{{url('/eliminar_usuario/'.$usuario->user_id)}}" method="get"></form>
                       </div>
                     </div>
@@ -40,8 +41,13 @@
     </div>
     
     <div class="modal modal-fixed-footer" id="modal_usuario">
+         <div class="close-modal">
+            <a href="#!" class="right-align modal-action modal-close waves-effect waves-green btn-flat "><i class="material-icons right">close</i></a>
+
+        </div>
+        
         <div class="modal-content">
-            <h4 class="center-align">Registrar usuario</h4>
+            <h4 >Registrar usuario</h4>
             <form action="{{url('/registrar_usuario')}}" method="post" id="form">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="row">
@@ -87,14 +93,11 @@
                     </div>
                   </div>
                   
-                  <p class="center-align"><a class="btn" onclick="verificar()">Registrar<i class="material-icons right">send</i></a></p>
+                  <p class="right-align"><a class="btn btn-medium" onclick="verificar()">Registrar<i class="material-icons right">send</i></a></p>
                 
             </form>
         
         </div>
-                    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>
-    </div>
     </div>
     
     <script>

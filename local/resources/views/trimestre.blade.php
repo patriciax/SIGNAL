@@ -2,10 +2,11 @@
 
 @section('content')
     
-        <form action="{{url('/trimestre')}}" method="post" id="form">
+        <div class="container container--card">
+            <form action="{{url('/trimestre')}}" method="post" id="form">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="row">
-                <div class="input-field col l4 offset-l2">
+                <div class="input-field col s6 ">
                     <select multiple name="meses[]" id="mes">
                         <option value="" disabled selected>Selecciona los meses</option>
                         <option value="Enero">Enero</option>
@@ -22,7 +23,7 @@
                         <option value="Diciembre">Diciembre</option>
                     </select>
                 </div>
-                <div class="input-field col l4">
+                <div class="input-field col s6 ">
                     <select multiple name="anios[]" id="anio">
                         <option value="" disabled selected>Selecciona los años</option>
                         <option value="2017">2017</option>
@@ -40,10 +41,11 @@
                     </select>
                 </div>
             </div>
-            <p class="center-align">
-                <a class="waves-effect waves-light btn" onclick="submit()"><i class="material-icons right">send</i>Crear</a>
+            <p class="right-align">
+                <a class="waves-effect waves-light btn btn-medium" onclick="submit()"><i class="material-icons right">send</i>Crear</a>
             </p>
         </form>
+        </div>
     
     <script>
 
