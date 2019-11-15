@@ -18,20 +18,20 @@
 
 			@foreach($departamentos as $departamento)
 
-				<div class="col l3">
+				<div class="col l4">
                 	<div class="card horizontal">
                   		<div class="card-stacked">
                     		<div class="card-content">
                     			<form method="post" action="{{url('/editar_departamento/'.$departamento->id)}}" id="editar{{$departamento->id}}">
                     				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	                    			<div class="row">
-					                    <div class="input-field col s12">
-					                      <input id="nombre" name="nombre" type="text" class="validate" value="{{$departamento->nombre_departamento}}" style="font-size: 18px;">
+					                    <div class="input-field col s12  shadow-input">
+					                      <input id="nombre" name="nombre" type="text" class="validate" value="{{$departamento->nombre_departamento}}" style="font-size: 15px;    padding-left: 9px;">
 					                    </div>
 					                </div>
 				                </form>
                     		</div>
-                    		<div class="card-action">
+                    		<div class="card-action card-edit">
                       			<div class="row center-flex ">
 								  <a onclick="editar({{$departamento->id}})" class="btn btn-small gray"><i class="material-icons">edit</i></a>
                       				<a onclick="eliminar({{$departamento->id}})" class="btn btn-small gray "><i class="material-icons">delete</i></a>
