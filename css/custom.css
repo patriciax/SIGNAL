@@ -115,6 +115,8 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([rea
 .content-login .circle {
   text-align: center;
   position: relative;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 span {
@@ -127,15 +129,15 @@ span {
 
 .content-login span:nth-child(1) {
   background: #5ce1e6;
-  left: 20%;
+  left: 0%;
 }
 
 .content-login span:nth-child(2) {
   background: #38b6ff;
-  left: 35%;
+  left: 25%;
 }
 
 .content-login span:nth-child(3) {
   background: #4200c4;
-  right: 23%;
+  right: 5%;
 }

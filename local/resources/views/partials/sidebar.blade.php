@@ -10,7 +10,7 @@
       </div>
       <!-- <div class="background"> -->
         <!-- <img class="responsive-img" src="{{url('img/material.jpg')}}"> -->
-      </div>
+      <!-- </div> -->
       <!-- <a href="#!user"><img class="circle" src="{{url('img/user.ico')}}"></a> -->
       <a href="#"><span class="black-text name">SIGNAL</span></a>
 
