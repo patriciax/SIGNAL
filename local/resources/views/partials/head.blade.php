@@ -1,6 +1,7 @@
 <title>Nomina</title>
         
 <link rel="stylesheet" type="text/css" href="{{url('css/materialize.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url('css/custom.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url('css/sweetalert.css')}}">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 

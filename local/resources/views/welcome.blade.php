@@ -6,15 +6,7 @@
     
     <body>
         
-        <img class="responsive-img" src="{{url('img/welcome.jpg')}}" 
-style="
-	width:100%;
-	height:100%; 
-    top:0;
-    left:0;
-    position:fixed;
-    z-index: -1;" 
->
+   
        
           @if(session('alert'))
         <ul class="collection">
@@ -23,7 +15,7 @@ style="
       @endif
            
            <div class="row">
-               
+<!--                
                <div class="col l6 s12">
                    <div class="row">
                    		<div class="col s12">
@@ -66,12 +58,12 @@ style="
 			        </div>
 			      </div>
                    </div>
-               </div>
+               </div> -->
                
-               <div class="col l6 s12">
+               <div class="card-center">
                    
-                   <div class="col s12">
-        <div class="card-panel z-depth-5 v-align animated slideInUp">
+                   <div class="">
+        <div class=" v-align animated slideInUp">
 
         	<h4 class="center-align">Administrador</h4>
           <form method="post" action="{{url('/handlelogin')}}">
