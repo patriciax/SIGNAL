@@ -13,7 +13,7 @@
         <!-- <img class="responsive-img" src="{{url('img/material.jpg')}}"> -->
       <!-- </div> -->
       <!-- <a href="#!user"><img class="circle" src="{{url('img/user.ico')}}"></a> -->
-      <a href="#"><span class="black-text name">SIGNAL</span></a>
+      <!-- <a href="#"><span class="black-text name">SIGNAL</span></a> -->
 
       <!-- <a href="#!name"><span class="white-text name">{{Auth::user()->nombre}}</span></a> -->
       <!-- <a href="#!email"><span class="white-text email">{{Auth::user()->email}}</span></a> -->
