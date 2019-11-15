@@ -56,7 +56,7 @@
                    </div>
                </div> -->
                
-               <div class="card-content">
+               <div class="card-content__login">
                    
                    <div class="card-center">
         <div class=" v-align animated slideInUp">
