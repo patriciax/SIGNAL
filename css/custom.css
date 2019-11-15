@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+.card-content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
 input:not([type]),
 input[type=text],
 input[type=password],
@@ -21,4 +27,61 @@ textarea.materialize-textarea {
     box-shadow: 0 0 5px #00000030;
     border-radius: 20px;
     border-bottom: none;
+    margin: 0;
 }
+
+.card-content form{
+    width: 260px;
+}
+
+.btn, .btn-large {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #4200c4;
+    padding: 0 90px;
+    color: #fff;
+    height: 50px;
+    text-transform: capitalize;
+}
+
+.btn:hover, .btn-large:hover {
+    background-color: #ffffff;
+    color: #4200c4;
+}
+
+button:focus {
+    background-color: #ffffff;
+    color: #4200c4;
+}
+input:not([type]).validate + label, input[type=text].validate + label, input[type=password].validate + label, input[type=email].validate + label, input[type=url].validate + label, input[type=time].validate + label, input[type=date].validate + label, input[type=datetime].validate + label, input[type=datetime-local].validate + label, input[type=tel].validate + label, input[type=number].validate + label, input[type=search].validate + label, textarea.materialize-textarea.validate + label {
+    width: 100%;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 0px;
+}
+
+.card-content .material-icons  {
+    font-size: 1.2rem;
+    margin-right: 12px;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border: 1px solid #0808087a;
+    box-shadow: 0 2px 5px #08080852;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label{
+    color: #0000003d;
+    margin-top: -10px;
+}
+
