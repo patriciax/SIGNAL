@@ -1,11 +1,12 @@
 <ul id="slide-out" class="side-nav fixed lighten-5">
   <li>
     <div class="userView">
-      <div class="content-login">
+      <div class="content-login  content-login--sidebar">
         <div class="circle">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span class="span-small"></span>
+          <span class="span-small"></span>
+          <span class="span-small"></span>
+          <a href="#"><strong class="black-text name-company">SIGNAL</strong></a>
         </div>
       </div>
       <!-- <div class="background"> -->
