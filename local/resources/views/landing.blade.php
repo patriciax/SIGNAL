@@ -9,8 +9,8 @@
 <table class="bordered center-align">
         <thead>
           <tr>
-              <th data-field="id">Id</th>
-              <th data-field="numero">Numero</th>
+              <!-- <th data-field="id">Id</th> -->
+              <th data-field="numero">Nº Nomina </th>
               <th data-field="tipo">Tipo</th>
               <th data-field="fecha_inicio">Fecha inicio</th>
               <th data-field="fecha_fin">Fecha fin</th>
@@ -23,9 +23,9 @@
         <tbody>
         @foreach($nominas as $nomina)
           <tr>
-            <td>
+            <!-- <td>
               {{$nomina->id}}
-            </td>
+            </td> -->
             <td>
             	{{$nomina->n_nomina}}
             </td>

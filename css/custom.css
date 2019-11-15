@@ -284,3 +284,35 @@ span {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1rem;
 }
+
+.btn-small{
+  padding: 10px;
+  display: flex;
+  width: 50px;
+  margin-right: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gray{
+  color: #9da8b3;
+  background-color: #eaf0f5;
+}
+
+.center-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gray:hover:nth-child(1) {
+
+  color: #38b6ff;
+}
+
+.float-btn{
+  position: fixed;
+  z-index: 9;
+  right: 10px;
+  bottom: 10px;
+}

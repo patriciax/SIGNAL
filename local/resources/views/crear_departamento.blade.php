@@ -7,8 +7,10 @@
           	<li class="collection-item teal darken-3"><h5 class="center-align" style="color: white;">No hay departamentos en existencia</h5></li>
         </ul>
 	@endif
+<div class="float-btn">
 
-	<p class="center-align"><a class="btn waves-effect modal-trigger" data-target="modal_departamento">Nuevo departamento<i class="material-icons right">add</i></a></p>
+<p class="center-align"><a class="btn btn-small waves-effect modal-trigger" data-target="modal_departamento"><i class="material-icons ">add</i></a></p>
+</div>
 
 	<div class="row">
 
@@ -30,9 +32,10 @@
 				                </form>
                     		</div>
                     		<div class="card-action">
-                      			<div class="row">
-                      				<a onclick="eliminar({{$departamento->id}})" class="btn red"><i class="material-icons">delete</i></a>
-                          			<a onclick="editar({{$departamento->id}})" class="btn"><i class="material-icons">edit</i></a>
+                      			<div class="row center-flex ">
+								  <a onclick="editar({{$departamento->id}})" class="btn btn-small gray"><i class="material-icons">edit</i></a>
+                      				<a onclick="eliminar({{$departamento->id}})" class="btn btn-small gray "><i class="material-icons">delete</i></a>
+                          			
                       			</div>
                     		</div>
                       		<form method="post" action="{{url('/borrar_departamento/'.$departamento->id)}}" id="eliminar{{$departamento->id}}" style="display: none;">
