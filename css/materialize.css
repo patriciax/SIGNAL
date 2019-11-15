@@ -2780,7 +2780,7 @@ video.responsive-video {
 }
 
 .pagination li.active {
-  background-color: #ee6e73;
+  background-color: #4200c4;
 }
 
 .pagination li.disabled a {
@@ -6213,7 +6213,7 @@ textarea.materialize-textarea+label:after {
 .input-field input[type=search]~.mdi-navigation-close,
 .input-field input[type=search]~.material-icons {
   position: absolute;
-  top: 0;
+  top: -9px;
   right: 1rem;
   color: transparent;
   cursor: pointer;
