@@ -8,11 +8,7 @@
         
    
        
-          @if(session('alert'))
-        <ul class="collection">
-          <li class="collection-item teal darken-3"><h5 class="center-align" style="color: white;">{{session('alert')}}</h5></li>
-        </ul>
-      @endif
+    
            
            <div class="row">
 <!--                
@@ -64,8 +60,14 @@
                    
                    <div class="card-center">
         <div class=" v-align animated slideInUp">
-
-        	<h4 class="center-align">Administrador</h4>
+		<div class="content-login">
+        <div class="circle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+        	<h4 class="center-align">Signal</h4>
           <form method="post" action="{{url('/handlelogin')}}">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
           	<div class="row">
@@ -86,14 +88,18 @@
           </form>
         </div>
       </div>
-                   
+	
                    
                </div>
                
            </div>
            
-           
-        
+	
+		   @if(session('alert'))
+        <ul class="collection">
+          <li class="collection-item teal darken-3"><h5 class="center-align" style="color: white;">{{session('alert')}}</h5></li>
+        </ul>
+      @endif
         
     </body>
     

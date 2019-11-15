@@ -1,12 +1,21 @@
-<ul id="slide-out" class="side-nav fixed blue lighten-5">
+<ul id="slide-out" class="side-nav fixed lighten-5">
   <li>
     <div class="userView">
-      <div class="background">
-        <img class="responsive-img" src="{{url('img/material.jpg')}}">
+      <div class="content-login">
+        <div class="circle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-      <a href="#!user"><img class="circle" src="{{url('img/user.ico')}}"></a>
-      <a href="#!name"><span class="white-text name">{{Auth::user()->nombre}}</span></a>
-      <a href="#!email"><span class="white-text email">{{Auth::user()->email}}</span></a>
+      <!-- <div class="background"> -->
+        <!-- <img class="responsive-img" src="{{url('img/material.jpg')}}"> -->
+      </div>
+      <!-- <a href="#!user"><img class="circle" src="{{url('img/user.ico')}}"></a> -->
+      <a href="#"><span class="black-text name">SIGNAL</span></a>
+
+      <!-- <a href="#!name"><span class="white-text name">{{Auth::user()->nombre}}</span></a> -->
+      <!-- <a href="#!email"><span class="white-text email">{{Auth::user()->email}}</span></a> -->
     </div>
   </li>
   <li>
