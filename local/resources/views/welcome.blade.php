@@ -85,7 +85,12 @@
 
           <p class="center-align"><button class="waves-effect  btn" type="submit">Iniciar</button></p>
 
-          </form>
+		  </form>
+		  @if(session('alert'))
+        <ul class="alert-welcome__content">
+          <li class="collection-item alert-welcome__item"><h5 class="center-align" style="color: white;">{{session('alert')}}</h5></li>
+        </ul>
+      @endif
         </div>
       </div>
 	
@@ -95,11 +100,7 @@
            </div>
            
 	
-		   @if(session('alert'))
-        <ul class="collection">
-          <li class="collection-item teal darken-3"><h5 class="center-align" style="color: white;">{{session('alert')}}</h5></li>
-        </ul>
-      @endif
+		
         
     </body>
     
