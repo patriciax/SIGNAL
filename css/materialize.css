@@ -6191,6 +6191,13 @@ textarea.materialize-textarea+label:after {
   line-height: inherit;
   padding-left: 4rem;
   width: calc(100% - 4rem);
+  border: 1px solid #0808087a;
+  box-shadow: 0 2px 5px #08080852;
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: #fff;
 }
 
 .input-field input[type=search]:focus {
@@ -7025,7 +7032,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .side-nav {
   position: fixed;
-  width: 300px;
+  width: 280px;
   left: 0;
   top: 0;
   margin: 0;
